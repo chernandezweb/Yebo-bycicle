@@ -1,0 +1,82 @@
+/*
+Vars
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
+
+
+$black: #010000;
+$lightWhite: #f7f7f7;
+$white: #ffffff;
+$lightGrey: #e6e6e6;
+$greyPurple:#4d4959;
+$grey: #848789;
+$darkGrey: #333;
+$red: #ff1755;
+$green: #64c29e;
+$lato: 'Lato', sans-serif;
+$latothin:'Lato:300', sans-serif;
+$latobold:'Lato:700', sans-serif;
+$latoitalic:'Lato:400i', sans-serif;
+
+/* Fonts -
+
+regular 400
+regular 400 Italic
+bold 700
+bold 700 Italic
+
+*/
+/*
+Mixins
+*/
+
+// @mixin translateY($e) {
+//   -webkit-transform: translateY($e);
+//     -moz-transform: translateY($e);
+//     -ms-transform: translateY($e);
+//         transform: translateY($e);
+// }
+@mixin centering {
+  -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+}
+
+@mixin transition($e) {
+  -webkit-transition: $e;
+    -moz-transition: $e;
+    -ms-transition: $e;
+        transition: $e;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+
+body{
+  font-family: $lato;
+  font-size: 15px;
+  color: $grey;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a{
+  text-decoration: none;
+  @include transition(.4s ease-in-out);
+  cursor: pointer;
+
+   &:hover{
+     color: $green;
+     @include  transition(.4s ease-in-out)
+  }
+
+}
+.container-fluid{
+  line-height: 24px
+}

@@ -1,0 +1,793 @@
+@import "_config.scss";
+
+// <Route exact path='/' component={Homepage} />
+// <Route exact path='/Products' component={Products} />
+
+
+
+/********************MOBILE***************************/
+
+@media screen and (max-width : 920px) {
+
+  h1{
+    font-size: 25px;
+    color: $greyPurple;
+    font-family: $latobold
+  }
+
+  header{
+    position: relative;
+    display: block;
+    width: 100%;
+    background: $black;
+    color:$white;
+
+    .menuDesktop ul{
+      display:none;
+    }
+
+    .menuMobile,
+    .menuMobile ul,
+    .menuMobile ul li{
+      margin: 0;
+      padding: 0;
+    }
+
+    .menuMobile{
+      background-color: $white;
+      padding: 20px 0;
+      ul li{
+        list-style-type: none;
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+
+
+        &.last{
+          margin: 0;
+        }
+
+        a{
+          font-size: 18px;
+          font-family: $latobold;
+          font-weight: bold;
+          color: $greyPurple;
+          @include transition(.4s ease-in-out);
+          &:hover{
+            color: $green;
+            @include transition(.4s ease-in-out) ;
+          }
+        }
+      }
+    }
+    .navBars{
+      font-size: 50px;
+      color: $greyPurple;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+
+      @include transition(.4s ease-in-out);
+      &:hover{
+        cursor: pointer;
+        color: $green;
+        @include transition(.4s ease-in-out) ;
+      }
+    }
+    .logoMobile{
+      width: 60px;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+  }
+
+  /*********************************************************/
+
+
+  .about{
+    background-color: $lightWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 550px;
+    // display: grid;
+    // grid-template-columns: 1fr 70% 1fr;
+    // grid-template-areas:
+    // ". icon ."
+    // ". title ."
+    // ". txt .";
+    // grid-gap: 50px;
+
+    padding: 100px 0 100px 0;
+
+    img{
+      // grid-area: icon;
+      // justify-self:center;
+      width: 52px;
+      width: 43px;
+    }
+
+    h1{
+      // grid-area: title;
+      font-size: 20px;
+    }
+    p{
+      // grid-area: txt;
+      width: 70%;
+    }
+
+  }
+
+  /**********************WORK section******************************/
+
+  .work{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "image1 image1"
+    "miniBlock1 miniBlock1"
+    "image2 image2"
+    "miniBlock2 miniBlock2"
+    "image3 image3"
+    "miniBlock3 miniBlock3"
+    "image4 image4";
+
+
+
+      img.section1{
+        grid-area: image1;
+        width: 100%;
+      }
+
+  /*********Miniblock Arrange************/
+  .oliva, .boriosa, .hulot{
+    background-color: $white;
+    padding: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .iconWork, h1, p{
+      padding-bottom: 30px;
+    }
+    .iconWork{
+      width: 52px;
+      width: 43px;
+    }
+    p{
+      width: 90%;
+    }
+    .smallWork{
+      align-self: end;
+      width: 100%;
+    }
+  }
+  /*********Miniblock Arrange************/
+
+  /*********Miniblock1************/
+  .oliva{
+    grid-area: miniBlock1;
+
+  }
+  /*********Miniblock1************/
+
+
+      img.section2{
+        grid-area: image2;
+        width: 100%;
+      }
+
+
+  /*********Miniblock2************/
+      .boriosa{
+        grid-area: miniBlock2;
+      }
+  /*********Miniblock2************/
+
+
+      .bottomImage3{
+        grid-area: image3;
+        width: 100%;
+      }
+
+
+  /*********Miniblock3************/
+      .hulot{
+        grid-area: miniBlock3;
+        width: 100%;
+      }
+  /*********Miniblock3************/
+
+
+      .bottomImage4{
+        grid-area: image4;
+        width: 100%;
+      }
+
+  }
+
+
+  /*********************************************************/
+
+
+  .quote{
+    background-color: $lightWhite;
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-areas:
+    ". icon ."
+    ". title ."
+    ". txt .";
+    grid-gap: 50px;
+
+    padding: 100px 0 100px 0;
+
+    a{
+      grid-area: icon;
+      justify-self:center;
+      font-size: 50px
+    }
+
+    h1{
+      grid-area: title;
+      font-size: 20px;
+    }
+    p{
+      grid-area: txt;
+    }
+
+  }
+
+
+  /*********************************************************/
+
+
+  .shopPreview{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "sImage1 sImage2"
+    "sImage3 sImage3"
+    "sImage4 sImage5"
+    "sImage4 sImage5"
+    "sImage6 sImage6"
+    "sImage7 sImage8"
+    "discoverShop discoverShop";
+
+    .sImage1{
+      grid-area: sImage1;
+    }
+    .sImage2{
+      grid-area: sImage2;
+    }
+    .sImage3{
+      grid-area: sImage3;
+    }
+    .sImage3{
+      grid-area: sImage3;
+    }
+    .sImage4{
+      grid-area: sImage4;
+    }
+    .sImage5{
+      grid-area: sImage5;
+    }
+    .sImage6{
+      grid-area: sImage6;
+    }
+    .sImage7{
+      grid-area: sImage7;
+    }
+    .sImage8{
+      grid-area: sImage8;
+    }
+
+
+
+    .sImage1, .sImage2, .sImage3, .sImage4, .sImage5, .sImage6, .sImage7, .sImage8{
+      position: relative;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover .overlay{
+        opacity: 0.9;
+      }
+    }
+
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $green;
+      opacity: 0;
+      a{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        @include centering;
+      }
+    }
+
+    .discoverShop{
+      position: relative;
+      grid-area: discoverShop;
+      height: 200px;
+      background-color: $greyPurple;
+
+      a{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include centering;
+        color: $white;
+        font-family: $latobold;
+        border: solid 1px $white;
+        padding: 10px
+      }
+    }
+
+  }
+
+  /*******************************************************/
+
+  .contact{
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 450px;
+    h1{
+      font-family: $latoitalic;
+    }
+    img{
+      width: 94px;
+      height: 85px;
+    }
+    form{
+      input{
+        margin-right: 10px;
+        width: 250px;
+        height: 70px;
+
+        @include placeholder {
+            color: $grey;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+      }
+
+      button{
+        width: 100px;
+        height: 70px;
+        background-color: $green;
+        border: none;
+        color: $white;
+        font-size: 20px;
+      }
+    }
+  }
+
+  /*******************************************************/
+  footer{
+    background-color: $lightWhite;
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-items: center;
+    text-align: center;
+    grid-gap:30px;
+
+    .socialMedia{
+      a{
+        font-size: 30px;
+        margin: 0 10px;
+      }
+      .fa-facebook{
+        color:#537bbd;
+      }
+      .fa-pinterest{
+        color: #eb5755;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 920px) {
+  h1{
+    font-size: 25px;
+    color: $greyPurple;
+    font-family: $latobold;
+  }
+
+  header{
+    position: relative;
+    display: block;
+    width: 100%;
+    background: $black;
+    color:$white;
+
+    nav,
+    nav ul,
+    nav ul li{
+      margin: 0;
+      padding: 0;
+    }
+
+    nav{
+      position: absolute;
+      width: 635px;
+      top: 80px; left:50% ;
+      @include centering;
+
+      ul li{
+        list-style-type: none;
+        display: inline-block;
+        margin-right: 75px;
+
+
+        &.last{
+          margin: 0;
+        }
+
+        a{
+          font-size: 18px;
+          font-family: $latobold;
+          font-weight: bold;
+          color: $greyPurple;
+        }
+      }
+    }
+    .navBars{
+      font-size: 50px;
+      color: $greyPurple;
+      display: none;
+    }
+    .logoMobile{
+      display: none;
+    }
+    .menuMobile{
+      display: none;
+    }
+  }
+
+  /*********************************************************/
+
+
+  .about{
+    background-color: $lightWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 450px;
+    // display: grid;
+    // grid-template-columns: 1fr 70% 1fr;
+    // grid-template-areas:
+    // ". icon ."
+    // ". title ."
+    // ". txt .";
+    // grid-gap: 50px;
+
+    padding: 100px 0 100px 0;
+
+    img{
+      // grid-area: icon;
+      // justify-self:center;
+      width: 52px;
+      width: 43px;
+    }
+
+    h1{
+      // grid-area: title;
+    }
+    p{
+      // grid-area: txt;
+      width: 70%;
+    }
+
+  }
+
+
+  /**********************WORK section******************************/
+
+  .work{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "image1 image1 miniBlock1"
+    "miniBlock2 image2 image2"
+    "image3 miniBlock3 image4";
+
+
+
+      img.section1{
+        grid-area: image1;
+        width: 100%;
+        height: 100%
+      }
+
+  /*********Miniblock Arrange************/
+  .oliva, .boriosa, .hulot{
+    background-color: $white;
+    padding: 60px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .iconWork{
+      width: 52px;
+      width: 43px;
+    }
+    p{
+      width: 90%;
+    }
+    .smallWork{
+      align-self: end;
+      width: 100%
+    }
+
+
+  }
+  /*********Miniblock Arrange************/
+
+  /*********Miniblock1************/
+      .oliva{
+        grid-area: miniBlock1;
+        .iconWork, h1, p{
+          padding-bottom: 30px;
+        }
+      }
+  /*********Miniblock1************/
+
+
+      img.section2{
+        grid-area: image2;
+        width: 100%;
+      }
+
+
+  /*********Miniblock2************/
+      .boriosa{
+        grid-area: miniBlock2;
+      }
+  /*********Miniblock2************/
+
+
+      .bottomImage3{
+        grid-area: image3;
+        width: 100%;
+        height: 100%;
+      }
+
+
+  /*********Miniblock3************/
+      .hulot{
+        grid-area: miniBlock3;
+      }
+  /*********Miniblock3************/
+
+
+      .bottomImage4{
+        grid-area: image4;
+      }
+
+  }
+
+  /*********************************************************/
+
+
+  .quote{
+    background-color: $lightWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 450px;
+    // display: grid;
+    // grid-template-columns: 1fr 70% 1fr;
+    // grid-template-areas:
+    // ". icon ."
+    // ". title ."
+    // ". txt .";
+    // grid-gap: 50px;
+
+    padding: 100px 0 100px 0;
+
+    a{
+      grid-area: icon;
+      justify-self:center;
+      font-size: 50px
+    }
+
+    h1{
+      // grid-area: title;
+    }
+    p{
+      // grid-area: txt;
+      width: 70%;
+    }
+
+  }
+
+
+  /*********************************************************/
+
+
+  .shopPreview{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "sImage1 sImage2 sImage4 sImage5 sImage6 sImage6"
+    "sImage3 sImage3 sImage4 sImage5 sImage7 sImage8"
+    "discoverShop discoverShop discoverShop discoverShop discoverShop discoverShop";
+
+    .sImage1{
+      grid-area: sImage1;
+    }
+    .sImage2{
+      grid-area: sImage2;
+    }
+    .sImage3{
+      grid-area: sImage3;
+      img{
+        width: 100%;
+      }
+    }
+    .sImage3{
+      grid-area: sImage3;
+    }
+    .sImage4{
+      grid-area: sImage4;
+    }
+    .sImage5{
+      grid-area: sImage5;
+    }
+    .sImage6{
+      grid-area: sImage6;
+    }
+    .sImage7{
+      grid-area: sImage7;
+    }
+    .sImage8{
+      grid-area: sImage8;
+    }
+
+
+
+    .sImage1, .sImage2, .sImage3, .sImage4, .sImage5, .sImage6, .sImage7, .sImage8{
+      position: relative;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover .overlay{
+        opacity: 0.9;
+        @include  transition(.4s ease-in-out)
+      }
+    }
+
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $green;
+      opacity: 0;
+      a{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        @include centering;
+      }
+    }
+
+    .discoverShop{
+      position: relative;
+      grid-area: discoverShop;
+      height: 200px;
+      background-color: $greyPurple;
+
+      a{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include centering;
+        color: $white;
+        font-family: $latobold;
+        border: solid 1px $white;
+        padding: 10px
+      }
+    }
+  }
+
+  /*******************************************************/
+
+  .contact{
+    padding: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 450px;
+    h1{
+      font-family: $latoitalic;
+    }
+    img{
+      width: 94px;
+      height: 85px;
+    }
+    form{
+      input{
+        margin-right: 10px;
+        width: 400px;
+        height: 70px;
+
+        @include placeholder {
+            color: $grey;
+            padding-left: 20px;
+            font-size: 20px;
+        }
+      }
+
+      button{
+        width: 100px;
+        height: 70px;
+        background-color: $green;
+        border: none;
+        color: $white;
+        font-size: 20px;
+      }
+    }
+  }
+
+
+  /*******************************************************/
+  footer{
+    background-color: $lightWhite;
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+    .socialMedia{
+      a{
+        font-size: 30px;
+        margin: 0 10px;
+      }
+      .fa-facebook{
+        color:#537bbd;
+      }
+      .fa-pinterest{
+        color: #eb5755;
+      }
+    }
+  }
+
+}
