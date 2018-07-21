@@ -3,6 +3,9 @@
 // <Route exact path='/' component={Homepage} />
 // <Route exact path='/Products' component={Products} />
 
+.App{
+  background-color: #f7f7f7;
+}
 
 
 /********************MOBILE***************************/
@@ -790,4 +793,12 @@
     }
   }
 
+}
+
+@media screen and (min-width: 1700px) {
+  section{
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
